@@ -85,8 +85,8 @@ function onCustomSubstateCreatePost(n)
 		doTweenAngle('oof', 'camGame', 0, 0.1, 'linear')
 		doTweenZoom('camz', 'camGame', 2, 180, 'quintOut')
 		doTweenAlpha('cama', 'camHUD', 0, 0.6, 'sineOut')
-		doTweenY('seeBFY', 'camGame', getProperty('camGame.y') - 100, 180, 'quintOut')
-		doTweenX('seeBFX', 'camGame', getProperty('camGame.x') + 25, 180, 'quintOut')
+		-- doTweenY('seeBFY', 'camGame', getProperty('camGame.y') - 100, 180, 'quintOut')
+		-- doTweenX('seeBFX', 'camGame', getProperty('camGame.x') + 25, 180, 'quintOut')
 
 		makeLuaSprite('chatbg', '', 0, 546 + 27)
 		makeGraphic('chatbg', 996, 27, '000000')
@@ -200,19 +200,31 @@ function onCustomSubstateCreatePost(n)
 		setTextColor('toastMusicText', '0xffffff')
 		setTextSize('toastMusicText', 16)
 		setTextBorder('toastMusicText', 0, '0xffffff')
-		addLuaText('toastMusicText')
 		setTextAlignment('toastMusicText', 'center')
 		setObjectCamera('toastMusicText', 'other')
-		setProperty('toastMusicText.x', getProperty('toast.x'))
-		setProperty('toastMusicText.y', getProperty('toast.y') + (getProperty('toastMusicText.height') / 2))
-
-		if musicPathSplit[table.getn(musicPathSplit) - 1] == 'deathScreen' then
-			-- nothing
-		else
+		if musicPathSplit[table.getn(musicPathSplit) - 1] ~= 'deathScreen' then
 			setProperty('toastMusicText.text',
 				getProperty('toastMusicText.text') ..
 				' by ' .. musicPathSplit[table.getn(musicPathSplit) - 1])
 		end
+
+		setProperty('toastMusicText.x', getProperty('toast.x'))
+		setProperty('toastMusicText.y', getProperty('toast.y') + (getProperty('toastMusicText.height') / 2))
+
+		makeLuaText('toastMusicText_s', 'Song: ' .. musicPathSplit[table.getn(musicPathSplit)],
+			getProperty('toast.width'), 0, 0)
+		setTextFont('toastMusicText_s', 'minecraft.ttf')
+		setTextColor('toastMusicText_s', '0x3e3e3e')
+		setTextSize('toastMusicText_s', 16)
+		setTextBorder('toastMusicText_s', 0, '0xffffff')
+		setTextAlignment('toastMusicText_s', 'center')
+		setObjectCamera('toastMusicText_s', 'other')
+		setProperty('toastMusicText_s.x', getProperty('toastMusicText.x') + 3)
+		setProperty('toastMusicText_s.y', getProperty('toastMusicText.y') + 3)
+		setProperty('toastMusicText_s.text', getProperty('toastMusicText.text'))
+
+		addLuaText('toastMusicText_s')
+		addLuaText('toastMusicText')
 
 		makeLuaSprite('button1', 'deathScreen/button', (screenWidth / 2) - (200 * 3) / 2,
 			(screenHeight / 2) + 36)
@@ -400,8 +412,8 @@ function onTimerCompleted(t)
 		for i = 0, 12 do
 			yuck = 'smoke' .. i
 			makeAnimatedLuaSprite('smoke' .. i, 'deathScreen/particle-smoke',
-				defaultBoyfriendX + 120 + getRandomInt(0, 500, true) - 250,
-				defaultBoyfriendY + 350 + getRandomInt(0, 300, true) - 150)
+				(getProperty('boyfriend.x') + 180) + 120 + getRandomInt(0, 500, true) - 250,
+				(getProperty('boyfriend.y') - 160) + 350 + getRandomInt(0, 300, true) - 150)
 			addAnimationByPrefix('smoke' .. i, 'smoke', 'smoke', 24, true)
 			playAnim('smoke' .. i, 'smoke')
 			doTweenY('tweenSmokeY' .. i, 'smoke' .. i,

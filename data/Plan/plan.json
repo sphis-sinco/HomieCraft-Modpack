@@ -43,6 +43,12 @@
 			[
 				["Add Camera Zoom", "0.1", "0"]
 			]
+		],
+		[
+			9000,
+			[
+				["Play Animation", "turn", "gf"]
+			]
 		]
 	],
 	"notes": [
@@ -150,11 +156,11 @@
 		{
 			"sectionNotes": [],
 			"sectionBeats": 4,
-			"gfSection": false,
+			"gfSection": true,
 			"altAnim": false,
 			"bpm": 150,
 			"changeBPM": false,
-			"mustHitSection": true
+			"mustHitSection": false
 		},
 		{
 			"sectionNotes": [

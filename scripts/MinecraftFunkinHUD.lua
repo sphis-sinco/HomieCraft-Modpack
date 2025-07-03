@@ -1,16 +1,16 @@
 ---@diagnostic disable: undefined-global
-healthSkin = 'normal'                           -- 'normal' or 'hardcore'
-hunger = 1                                      -- JUST IN CASE IF YOU WANT IT! ( goes from 0 to 1 )
-items = {                                       -- you can add custom items here so yeah. {'item texture(in images/items)', 'Display Name', Is it Enchnated? (true/false), stack size}
-  { 'wooden_sword',  'Wooden sword',       false, 1 }, -- 1
-  { 'apple',       'Apple',                 false, 2 }, -- 2
-  { 'cobblestone',       'Cobblestone',                 false, 16 }, -- 3
+healthSkin = 'normal'                              -- 'normal' or 'hardcore'
+hunger = 1                                         -- JUST IN CASE IF YOU WANT IT! ( goes from 0 to 1 )
+items = {                                          -- you can add custom items here so yeah. {'item texture(in images/items)', 'Display Name', Is it Enchnated? (true/false), stack size}
+  { 'empty',       '',                false, 1 }, -- 1
+  { 'empty',       '',                 false, 1 }, -- 2
+  { 'empty',       '',                 false, 1 }, -- 3
   { 'empty',       '',                 false, 1 }, -- 4
   { 'empty',       '',                 false, 1 }, -- 5
   { 'empty',       '',                 false, 1 }, -- 6
   { 'stick',       'Debug Mode',       true,  1 }, -- 7, Debug Menu
   { 'armor_stand', 'Character Editor', true,  1 }, -- 8, Character Editor
-  { 'empty',       '',                 true,  1 } -- 9
+  { 'empty',       '',                 true,  1 }  -- 9
 }
 
 -- DONT MESS WITH UNLESS YOU KNOW WHAT YOU ARE DOING!!!!!
@@ -30,6 +30,12 @@ pastitems = {
 
 function onCreatePost()
   luaDebugMode = true
+
+  if songName == 'Plan' then
+    items[1] = { 'wooden_sword', 'Wooden sword', false, 1 }
+    items[2] = { 'apple', 'Apple', false, 2 }
+    items[3] = { 'cobblestone', 'Cobblestone', false, 16 }
+  end
 
   initSaveData('options', 'nb2MCHUD')
   if getDataFromSave('options', 'screenRotate', true) == nil then
@@ -161,7 +167,7 @@ function onCreatePost()
   addLuaSprite('expempty', true)
   screenCenter('expempty', 'x')
 
-  makeLuaSprite('expfill', 'desatbar/full', 0, baseCoords[2] + 18)
+  makeLuaSprite('expfill', 'desatbar/full-railed', 0, baseCoords[2] + 18)
   scaleObject('expfill', scalething, scalething)
   setObjectCamera('expfill', 'hud')
   setProperty('expfill.antialiasing', false)
@@ -331,7 +337,7 @@ end
 function onSlotSwitch(slot)
   setProperty('itemname.alpha', 1)
   cancelTween('fadeing')
-  if items[slot][4] > 1 then 
+  if items[slot][4] > 1 then
     setTextString('itemname', items[slot][2] .. " (x" .. items[slot][4] .. ")")
   else
     setTextString('itemname', items[slot][2])

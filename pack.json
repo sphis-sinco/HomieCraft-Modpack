@@ -3,7 +3,7 @@
 	"description": "Description",
 	"restart":false,
 	"runsGlobally": false,
-	"color": [170, 0, 255],
+	"color": [255, 255, 255],
 	"discordRPC": "1390348541658140746",
 	"iconFramerate": 10
 }

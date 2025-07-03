@@ -107,10 +107,10 @@ function onCreatePost()
   screenCenter('bossbarfill', 'x')
   setProperty('bossbarfill.visible', false)
 
-  makeLuaText('bossbarname', songName .. ' - [' .. string.upper(difficultyName) .. ']', screenWidth, 0,
-    (downscroll and screenHeight - 55 or -5))
+  makeLuaText('bossbarname', songName .. ' (' .. string.upper(difficultyName) .. ')', screenWidth, 0,
+    (downscroll and screenHeight - 50 or 0))
   setTextFont('bossbarname', 'Minecraftia.ttf')
-  setTextSize('bossbarname', 18)
+  setTextSize('bossbarname', 16)
   addLuaText('bossbarname')
   screenCenter('bossbarname', 'x')
   setProperty('bossbarname.visible', false)
@@ -143,10 +143,10 @@ function onCreatePost()
   end
 
   local hungeroffset = 650
-  basehungery = baseCoords[2] - 12
+  basehungery = baseCoords[2] - 15
   for i = 1, 10 do
     makeLuaSprite('hungerBG' .. i, nil, baseCoords[1] + hungeroffset - (i - 1) * (8 * scalething), basehungery)
-    loadGraphic('hungerBG' .. i, 'mineIcons/hungerIcons', 9, 9)
+    loadGraphic('hungerBG' .. i, 'mineIcons/hungerIcons', 11, 11)
     addAnimation('hungerBG' .. i, 'full', { 0, 1 }, 0)
 
     scaleObject('hungerBG' .. i, scalething, scalething)
@@ -158,7 +158,7 @@ function onCreatePost()
 
   for i = 1, 10 do
     makeLuaSprite('hunger' .. i, nil, baseCoords[1] + hungeroffset - (i - 1) * (8 * scalething), basehungery)
-    loadGraphic('hunger' .. i, 'mineIcons/hungerIcons', 9, 9)
+    loadGraphic('hunger' .. i, 'mineIcons/hungerIcons', 11, 11)
     addAnimation('hunger' .. i, 'full', { 4, 3 }, 0)
     addAnimation('hunger' .. i, 'half', { 5, 4 }, 0)
     addAnimation('hunger' .. i, 'empty', { 0, 4 }, 0)
@@ -186,7 +186,7 @@ function onCreatePost()
   makeLuaText('exptext', '0', screenWidth, 0, baseCoords[2] - 8)
   setTextAlignment('exptext', 'center')
   setTextFont('exptext', 'Minecraftia.ttf')
-  setTextSize('exptext', 20)
+  setTextSize('exptext', 24)
   addLuaText('exptext')
   screenCenter('exptext', 'x')
   setTextColor('exptext', 'b5fc7c')
@@ -195,14 +195,14 @@ function onCreatePost()
   makeLuaText('shitscore', 'Score: 0 | Misses: 0 | Accuracy: ??.??% [?]', screenWidth, 0,
     baseCoords[2] + (downscroll and 130 or -120))
   setTextFont('shitscore', 'Minecraftia.ttf')
-  setTextSize('shitscore', 18)
+  setTextSize('shitscore', 16)
   setTextAlignment('shitscore', 'center')
   -- addLuaText('shitscore')
   screenCenter('shitscore', 'x')
 
-  makeLuaText('itemname', '', screenWidth, 0, (downscroll and 220 or 520))
+  makeLuaText('itemname', '', screenWidth, 0, (downscroll and 150 or 520))
   setTextFont('itemname', 'Minecraftia.ttf')
-  setTextSize('itemname', 18)
+  setTextSize('itemname', 16)
   addLuaText('itemname')
   screenCenter('itemname', 'x')
   setProperty('itemname.alpha', 0)

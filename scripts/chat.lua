@@ -1,3 +1,4 @@
+---@diagnostic disable: undefined-global
 if not lowQuality then
 	T = 0
 	Tend = 0

@@ -1,0 +1,6 @@
+- Changed vertical position of item name text on downscroll
+- Texts with a size of 24 have a shadow offset of 3
+- Texts with a size of 16 have a shadow offset of 2
+- Fixed stray pixels in the hunger bar
+- Songname bossbar is formated like "Song (DIFFICULTY)" now
+- No more blurry text

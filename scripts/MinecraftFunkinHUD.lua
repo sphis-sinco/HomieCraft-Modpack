@@ -2,7 +2,7 @@
 healthSkin = 'normal'                              -- 'normal' or 'hardcore'
 hunger = 1                                         -- JUST IN CASE IF YOU WANT IT! ( goes from 0 to 1 )
 items = {                                          -- you can add custom items here so yeah. {'item texture(in images/items)', 'Display Name', Is it Enchnated? (true/false), stack size}
-  { 'empty',       '',                false, 1 }, -- 1
+  { 'empty',       '',                 false, 1 }, -- 1
   { 'empty',       '',                 false, 1 }, -- 2
   { 'empty',       '',                 false, 1 }, -- 3
   { 'empty',       '',                 false, 1 }, -- 4
@@ -12,6 +12,7 @@ items = {                                          -- you can add custom items h
   { 'armor_stand', 'Character Editor', true,  1 }, -- 8, Character Editor
   { 'empty',       '',                 true,  1 }  -- 9
 }
+sing_item = 0
 
 -- DONT MESS WITH UNLESS YOU KNOW WHAT YOU ARE DOING!!!!!
 scalething = 3
@@ -28,6 +29,18 @@ pastitems = {
   { '', '', false, 1 },
 }
 
+function goodNoteHitPre(index, noteData, noteType, isSustain)
+  if sing_item > 0 then
+    curItem = sing_item
+  end
+end
+
+function noteMiss(index, noteData, noteType, isSustain)
+  if sing_item > 0 then
+    curItem = sing_item
+  end
+end
+
 function onCreatePost()
   luaDebugMode = true
 
@@ -35,6 +48,7 @@ function onCreatePost()
     items[1] = { 'wooden_sword', 'Wooden sword', false, 1 }
     items[2] = { 'apple', 'Apple', false, 2 }
     items[3] = { 'cobblestone', 'Cobblestone', false, 16 }
+    sing_item = 1
   end
 
   initSaveData('options', 'nb2MCHUD')

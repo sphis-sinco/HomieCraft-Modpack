@@ -3,15 +3,15 @@ Sinco::sinco::Director, Animator::https://www.youtube.com/@sphis_sinco::00FF00
 Paul leps::pauleps::Lua Programmer::https://www.youtube.com/@nowayyourepingingme8082::FF0000
 Djotta flow::dj::Chillin::https://www.youtube.com/@djotta11::0000FF
 Minecraft Death Screen
-CheesyCap::cheesycap::Modified the scripts::https://gamebanana.com/members/2930763::0xFF33FF66
-n_bonnie::n_bonnie::Minecraft HUD.\nUsed to make the "damage" script.::https://underscorebon.carrd.co/::0xFF33FF66
-Krnqle::krnqle::17Bucks Boulevard game over script and 17Boo game over script.\nUsed to make "you died" script.::https://twitter.com/Krnqle::0xFF33FF66
-andrww/sosclabab::andrww::17Bucks Boulevard game over script.\nUsed to make the "you died" script.::https://twitter.com/sosclabab::0xFF33FF66
-volv::volv::17Bucks Boulevard game over script.\nUsed to make the "you died" script.::https://twitter.com/_volvy_::0xFF33FF66
-_mxnolusion_::_mxnolusion_::.json text extraction code::https://gamebanana.com/members/3292520::0xFF33FF66
-Meme1079::meme1079::Icon color getter::https://gamebanana.com/members/2112708::0xFF33FF66
+CheesyCap::face::Modified the scripts::https://gamebanana.com/members/2930763::0xFF33FF66
+n_bonnie::face::Minecraft HUD.\nUsed to make the "damage" script.::https://underscorebon.carrd.co/::0xFF33FF66
+Krnqle::face::17Bucks Boulevard game over script and 17Boo game over script.\nUsed to make "you died" script.::https://twitter.com/Krnqle::0xFF33FF66
+andrww/sosclabab::face::17Bucks Boulevard game over script.\nUsed to make the "you died" script.::https://twitter.com/sosclabab::0xFF33FF66
+volv::face::17Bucks Boulevard game over script.\nUsed to make the "you died" script.::https://twitter.com/_volvy_::0xFF33FF66
+_mxnolusion_::face::.json text extraction code::https://gamebanana.com/members/3292520::0xFF33FF66
+Meme1079::face::Icon color getter::https://gamebanana.com/members/2112708::0xFF33FF66
 MC Death Screen Assets
-Mojang Studios\nXbox Game Studios::mojang::Minecraft Devs.\nSome Minecraft assets::https://www.minecraft.net/en-us::0xFF33FF66
+Mojang Studios\nXbox Game Studios::face::Minecraft Devs.\nSome Minecraft assets::https://www.minecraft.net/en-us::0xFF33FF66
 C418::c418::Music::https://c418.org/::0xFF33FF66
 Minecraft HUD
-n_bonnie::n_bonnie::Minecraft HUD.::https://underscorebon.carrd.co/::0xFF33FF66
+n_bonnie::face::Minecraft HUD.::https://underscorebon.carrd.co/::0xFF33FF66

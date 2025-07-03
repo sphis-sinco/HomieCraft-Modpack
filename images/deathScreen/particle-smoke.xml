@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="particle-smoke.png">
+<SubTexture name="smoke0000" x="0" y="0" width="80" height="80" frameX="0" frameY="0" frameWidth="80" frameHeight="80" />
+<SubTexture name="smoke0001" x="80" y="0" width="70" height="70" frameX="-10" frameY="-10" frameWidth="80" frameHeight="80" />
+<SubTexture name="smoke0002" x="0" y="80" width="50" height="50" frameX="-20" frameY="-20" frameWidth="80" frameHeight="80" />
+<SubTexture name="smoke0003" x="50" y="80" width="40" height="50" frameX="-30" frameY="-20" frameWidth="80" frameHeight="80" />
+<SubTexture name="smoke0004" x="90" y="80" width="30" height="50" frameX="-30" frameY="-20" frameWidth="80" frameHeight="80" />
+<SubTexture name="smoke0005" x="120" y="80" width="30" height="40" frameX="-30" frameY="-30" frameWidth="80" frameHeight="80" />
+<SubTexture name="smoke0006" x="0" y="130" width="20" height="20" frameX="-30" frameY="-30" frameWidth="80" frameHeight="80" />
+</TextureAtlas>

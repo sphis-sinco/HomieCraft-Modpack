@@ -4,7 +4,7 @@ hunger = 1                                      -- JUST IN CASE IF YOU WANT IT! 
 items = {                                       -- you can add custom items here so yeah. {'item texture(in images/items)', 'Display Name', Is it Enchnated? (true/false), stack size}
   { 'wooden_sword',  'Wooden sword',       false, 1 }, -- 1
   { 'apple',       'Apple',                 false, 2 }, -- 2
-  { 'empty',       '',                 false, 1 }, -- 3
+  { 'cobblestone',       'Cobblestone',                 false, 16 }, -- 3
   { 'empty',       '',                 false, 1 }, -- 4
   { 'empty',       '',                 false, 1 }, -- 5
   { 'empty',       '',                 false, 1 }, -- 6

@@ -1,6 +1,6 @@
 {
-	"name": "Name",
-	"description": "Description",
+	"name": "Homie Craft Alpha",
+	"description": "The homies are playing minecraft. What more can I say?",
 	"restart":false,
 	"runsGlobally": false,
 	"color": [255, 255, 255],

@@ -32,12 +32,7 @@ pastitems = {
 function goodNoteHitPre(index, noteData, noteType, isSustain)
   if sing_item > 0 then
     curItem = sing_item
-  end
-end
-
-function noteMiss(index, noteData, noteType, isSustain)
-  if sing_item > 0 then
-    curItem = sing_item
+    switched_item = false
   end
 end
 
@@ -232,6 +227,10 @@ function onSongStart()
 end
 
 function onUpdate(elapsed)
+  if not curItem == sing_item then
+    playAnim('boyfriend', 'item-' .. items[slot][1])
+  end
+
   local keys = { 'ONE', 'TWO', 'THREE', 'FOUR', 'FIVE', 'SIX', 'SEVEN', 'EIGHT', 'NINE' } -- i hate how this works
   for i = 1, 9 do
     if keyboardJustPressed(keys[i]) then
@@ -240,6 +239,15 @@ function onUpdate(elapsed)
     end
   end
   setProperty('hbSelect.x', getProperty('hotbar.x') - 62 + (20 * scalething * (curItem)))
+  if switched_item then
+    playAnim('boyfriend', 'item-' .. items[curItem][1])
+  end
+end
+
+function onStepHit()
+  if curItem == sing_item then
+    switched_item = false
+  end
 end
 
 function onUpdatePost(elapsed)
@@ -357,9 +365,21 @@ function onSlotSwitch(slot)
     setTextString('itemname', items[slot][2])
   end
   runTimer('fadetext1', 2)
+  switched_item = true
+  playAnim('boyfriend', 'item-' .. items[curItem][1])
+  if items[slot][1] == 'empty' then
+    -- switched_item = false
+    -- playAnim('boyfriend', 'idle')
+  end
 end
 
+switched_item = false
+
 function noteMiss(membersIndex, noteData, noteType, isSustainNote)
+  if sing_item > 0 then
+    curItem = sing_item
+    switched_item = false
+  end
   if getDataFromSave('options', 'hurtSound', true) then
     playSound('hit' .. math.random(1, 3), 1, 'minecraftHit')
   end

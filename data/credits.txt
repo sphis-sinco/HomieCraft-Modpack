@@ -17,3 +17,5 @@ Lena Raine::lena::Music::http://lena.fyi/::0xFF33FF66
 Aaron Cherof::aaron::Music::https://www.cherof.com/::0xFF33FF66
 Kumi Tanioka::kumi::Music::::0xFF33FF66
 CaptainSparklez::sparklez::Music::https://www.youtube.com/CAPTAINSPARKLEZ::0xFF33FF66
+Minecraft HUD
+n_bonnie::n_bonnie::Minecraft HUD.::https://underscorebon.carrd.co/::0xFF33FF66

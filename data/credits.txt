@@ -10,12 +10,8 @@ andrww/sosclabab::andrww::17Bucks Boulevard game over script.\nUsed to make the 
 volv::volv::17Bucks Boulevard game over script.\nUsed to make the "you died" script.::https://twitter.com/_volvy_::0xFF33FF66
 _mxnolusion_::_mxnolusion_::.json text extraction code::https://gamebanana.com/members/3292520::0xFF33FF66
 Meme1079::meme1079::Icon color getter::https://gamebanana.com/members/2112708::0xFF33FF66
-Minecraft Death Screen Assets
+MC Death Screen Assets
 Mojang Studios\nXbox Game Studios::mojang::Minecraft Devs.\nSome Minecraft assets::https://www.minecraft.net/en-us::0xFF33FF66
 C418::c418::Music::https://c418.org/::0xFF33FF66
-Lena Raine::lena::Music::http://lena.fyi/::0xFF33FF66
-Aaron Cherof::aaron::Music::https://www.cherof.com/::0xFF33FF66
-Kumi Tanioka::kumi::Music::::0xFF33FF66
-CaptainSparklez::sparklez::Music::https://www.youtube.com/CAPTAINSPARKLEZ::0xFF33FF66
 Minecraft HUD
 n_bonnie::n_bonnie::Minecraft HUD.::https://underscorebon.carrd.co/::0xFF33FF66

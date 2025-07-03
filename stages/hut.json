@@ -1,0 +1,71 @@
+{
+	"camera_boyfriend": [
+		200,
+		0
+	],
+	"preload": {
+	},
+	"_editorMeta": {
+		"boyfriend": "sinco-plan",
+		"dad": "dj-plan",
+		"gf": "paul-plan"
+	},
+	"boyfriend": [
+		0,
+		0
+	],
+	"stageUI": "pixel",
+	"girlfriend": [
+		0,
+		0
+	],
+	"defaultZoom": 1.5,
+	"objects": [
+		{
+			"x": 0,
+			"y": 0,
+			"scale": [
+				1,
+				1
+			],
+			"image": "backgrounds/hut/bg",
+			"flipX": false,
+			"filters": 3,
+			"color": "FFFFFF",
+			"angle": 0,
+			"name": "bg",
+			"antialiasing": false,
+			"flipY": false,
+			"scroll": [
+				1,
+				1
+			],
+			"alpha": 1,
+			"type": "sprite"
+		},
+		{
+			"type": "boyfriend"
+		},
+		{
+			"type": "dad"
+		},
+		{
+			"type": "gf"
+		}
+	],
+	"camera_girlfriend": [
+		200,
+		-100
+	],
+	"opponent": [
+		0,
+		0
+	],
+	"directory": "",
+	"camera_speed": 1.5,
+	"hide_girlfriend": false,
+	"camera_opponent": [
+		-200,
+		0
+	]
+}

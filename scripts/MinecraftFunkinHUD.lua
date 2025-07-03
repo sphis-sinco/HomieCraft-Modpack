@@ -1,8 +1,9 @@
+---@diagnostic disable: undefined-global
 healthSkin = 'normal'                           -- 'normal' or 'hardcore'
 hunger = 1                                      -- JUST IN CASE IF YOU WANT IT! ( goes from 0 to 1 )
 items = {                                       -- you can add custom items here so yeah. {'item texture(in images/items)', 'Display Name', Is it Enchnated? (true/false), stack size}
   { 'wooden_sword',  'Wooden sword',       false, 1 }, -- 1
-  { 'empty',       '',                 false, 1 }, -- 2
+  { 'apple',       'Apple',                 false, 2 }, -- 2
   { 'empty',       '',                 false, 1 }, -- 3
   { 'empty',       '',                 false, 1 }, -- 4
   { 'empty',       '',                 false, 1 }, -- 5
@@ -330,7 +331,11 @@ end
 function onSlotSwitch(slot)
   setProperty('itemname.alpha', 1)
   cancelTween('fadeing')
-  setTextString('itemname', items[slot][2])
+  if items[slot][4] > 1 then 
+    setTextString('itemname', items[slot][2] .. " (x" .. items[slot][4] .. ")")
+  else
+    setTextString('itemname', items[slot][2])
+  end
   runTimer('fadetext1', 2)
 end
 

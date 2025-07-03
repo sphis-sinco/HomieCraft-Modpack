@@ -3,9 +3,14 @@
 modName = 'Homie Craft'
 modState = ' Alpha'
 modVersion = '1.1.0'
+releaseState = 'Release'
 
 function onCreatePost()
-        makeLuaText('front', modName ..  modState .. ' ' .. modVersion, 0, 10, 0)
+        if checkFileExists('.dev/.devText') then
+                releaseState = 'Indev'
+        end
+
+        makeLuaText('front', modName ..  modState .. ' ' .. modVersion .. ' (' .. indevString .. ')', 0, 10, 0)
         setTextFont('front', 'Minecraftia.ttf')
         setTextSize('front', 16)
         setTextColor('front', '0xffffff')

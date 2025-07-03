@@ -1,3 +1,4 @@
+- The watermark can detect if the mod pack is currently a debug build
 - Changed vertical position of item name text on downscroll
 - Texts with a size of 24 have a shadow offset of 3
 - Texts with a size of 16 have a shadow offset of 2

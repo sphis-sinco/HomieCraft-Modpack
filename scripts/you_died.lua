@@ -44,6 +44,8 @@ function onCreatePost()
 	precacheImage('deathScreen/button')
 	precacheImage('deathScreen/button-hovered')
 	precacheImage('deathScreen/button-pressed')
+
+	setProperty('comboGroup.x', -9000)
 end
 
 function onGameOver()
@@ -236,8 +238,6 @@ function onCustomSubstateCreatePost(n)
 		setObjectCamera('button1p', 'other')
 		setProperty('button1p.antialiasing', false)
 		scaleObject('button1p', 3, 3)
-
-
 
 		makeLuaText('retry s', 'Retry', 1280, 3, (screenHeight / 2) + 36 + 10 + 3)
 		setTextFont('retry s', 'minecraft.ttf')

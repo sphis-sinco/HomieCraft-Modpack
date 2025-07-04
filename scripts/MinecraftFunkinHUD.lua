@@ -47,6 +47,28 @@ function onCreate()
   setOnScripts('baseCoords', baseCoords)
 end
 
+function onStepHit()
+  increaseCobble = false
+  cobbleItemIndex = 0
+
+  if songName == 'Deviate' then
+    cobbleItemIndex = 1
+    if curBeat == 23 and curStep == 89 then
+      increaseCobble = true
+    end
+    if curBeat == 39 and curStep == 156 then
+      increaseCobble = true
+    end
+    if curBeat == 131 and curStep == 524 then
+      increaseCobble = true
+    end
+  end
+
+  if increaseCobble then
+    items[cobbleItemIndex][4] = items[cobbleItemIndex][4] + 1
+  end
+end
+
 function onCreatePost()
   luaDebugMode = true
 
@@ -58,6 +80,7 @@ function onCreatePost()
   end
 
   if songName == 'Deviate' then
+    items[1] = { 'cobblestone', 'Cobblestone', false, 34 }
     items[3] = { 'stone_pickaxe', 'Stone Pickaxe', false, 1 }
     sing_item = 3
   end

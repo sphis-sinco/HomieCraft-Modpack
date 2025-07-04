@@ -43,7 +43,7 @@ dadAltName = dadName
 gfAltName = gfName
 deathMethod = ''
 
-function onCreatePost()
+function onCountdownTick(counter)
 	precacheImage('songToast')
 	precacheImage('deathScreen/particle-smoke')
 	precacheImage('deathScreen/button')
@@ -53,25 +53,28 @@ function onCreatePost()
 	setProperty('comboGroup.x', -9000)
 end
 
-function onGameOver()
+function onGameOver(elapsed)
+	openCustomSubstate('gameover', true)
+
 	return Function_Stop
 end
 
-dead = false
-function onUpdate(elapsed)
-	if getHealth() <= 0.0001 and not dead then
-		openCustomSubstate('gamerrrr', true)
-		dead = true
-	end
-end
+speed = 0.4
+xOff = 180
+yOff = 320
+
+xOffSmoke = xOff
+yOffSmoke = 160
 
 function onCustomSubstateCreatePost(n)
-	if n == 'gamerrrr' then
+	if n == 'gameover' then
 		setPropertyFromClass('flixel.FlxG', 'mouse.visible', true)
 
 		playAnim('boyfriend', 'die', false)
 		playAnim('dad', 'idle')
-		playAnim('gf', 'NOOO')
+		if not getProperty('girlfriend') == nil then
+			playAnim('gf', 'NOOO')
+		end
 		setObjectOrder('boyfriendGroup', getObjectOrder('boyfriendGroup') - 1)
 
 		playSound('deathScreen/hurt' .. getRandomInt(1, 11, true))
@@ -82,9 +85,17 @@ function onCustomSubstateCreatePost(n)
 		end
 
 		setProperty('boyfriend.color', getColorFromHex('FF0000'))
-		doTweenAngle('turnp', 'boyfriend', 90, 0.4, 'expoOut')
-		doTweenX('fallX', 'boyfriend', getProperty(('boyfriend.x')) + 180, 0.4, 'expoOut')
-		doTweenY('fallY', 'boyfriend', getProperty(('boyfriend.y')) + 320, 0.4, 'expoOut')
+
+		if songName == 'Deviate' then
+			speed = 4
+			xOff = 640
+			xOffSmoke = xOff
+			yOffSmoke = -160
+		end
+
+		doTweenAngle('turnp', 'boyfriend', 90, speed, 'expoOut')
+		doTweenX('fallX', 'boyfriend', getProperty(('boyfriend.x')) + xOff, speed, 'expoOut')
+		doTweenY('fallY', 'boyfriend', getProperty(('boyfriend.y')) + yOff, speed, 'expoOut')
 		runTimer('villagerFade', 0.7)
 
 		doTweenAngle('oof', 'camGame', 0, 0.1, 'linear')
@@ -292,8 +303,6 @@ function onCustomSubstateCreatePost(n)
 		setTextAlignment('retryp', 'center')
 		setObjectCamera('retryp', 'other')
 
-
-
 		makeLuaSprite('button2', 'deathScreen/button', (screenWidth / 2) - (200 * 3) / 2,
 			(screenHeight / 2) + 108)
 		setLuaSpriteScrollFactor('button2', 0, 0);
@@ -400,8 +409,8 @@ function onTimerCompleted(t)
 		for i = 0, 12 do
 			yuck = 'smoke' .. i
 			makeAnimatedLuaSprite('smoke' .. i, 'deathScreen/particle-smoke',
-				(getProperty('boyfriend.x') + 180) + 120 + getRandomInt(0, 500, true) - 250,
-				(getProperty('boyfriend.y') - 160) + 350 + getRandomInt(0, 300, true) - 150)
+				(getProperty('boyfriend.x') + xOffSmoke) + 120 + getRandomInt(0, 500, true) - 250,
+				(getProperty('boyfriend.y') - yOffSmoke) + 350 + getRandomInt(0, 300, true) - 150)
 			addAnimationByPrefix('smoke' .. i, 'smoke', 'smoke', 24, true)
 			playAnim('smoke' .. i, 'smoke')
 			doTweenY('tweenSmokeY' .. i, 'smoke' .. i,
@@ -485,7 +494,7 @@ frameDAD = 0
 frameSMOKE = 0
 frameLose = 0
 function onCustomSubstateUpdate(n, elapsed)
-	if n == 'gamerrrr' then
+	if n == 'gameover' then
 		frameBF = frameBF + (elapsed * 20)
 		frameDAD = frameDAD + (elapsed * 20)
 		frameGF = frameGF + (elapsed * 20)
@@ -535,7 +544,7 @@ function onCustomSubstateUpdate(n, elapsed)
 end
 
 function onCustomSubstateUpdatePost(n, elapsed)
-	if n == 'gamerrrr' then
+	if n == 'gameover' then
 		if (keyboardJustPressed('ENTER') or keyboardJustPressed('SPACE')) and
 		    getProperty('button1p.alpha') ~= 1 and
 		    rset == false then

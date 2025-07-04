@@ -6,6 +6,8 @@
 - Added settings to the mod
 
 # Minor changes
+- Fixed death screen crash when the girlfriend is null
+- Added death message for when you die during the countdown
 - LuaDebugMode enables when the game is detected as an Indev build
 - Re-exported Plan assets
 - Added a full combo popup when you beat a song without a miss

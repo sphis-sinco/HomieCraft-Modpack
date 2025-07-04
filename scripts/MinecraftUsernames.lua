@@ -7,6 +7,10 @@ sinco = 'Sphis_Sinco'
 dj = 'DjottaFlow'
 paul = 'The_Master_King'
 
+function onCountdownTick(counter)    
+        doTheChecks()
+end
+
 function onCreate()
         doTheChecks()
 end

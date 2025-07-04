@@ -1,4 +1,10 @@
+# Major changes
 - Added Deviate - new song
+- Added a proper save
+- Added Save.lua to manage save stuff
+- Added settings to the mod
+
+# Minor changes
 - Changed the color for the song "Plan" in freeplay from 0000FF to 00FF00 / Blue to Lime
 - Replaced DJ's Icon for the song "Plan" with sinco's icon in the freeplay menu
 - Added item increasing support
@@ -9,9 +15,6 @@
 - Fixed Credits for Mojang
 - Changed Credits
 - Fixed C418 credit icon
-- Added a proper save
-- Added Save.lua to manage save stuff
-- Added settings to the mod
 - Added a combo popup when your combo is 30 or higher
 - The TotalNotes Code has been moved to TotalNotes.lua
 - The Minecraft EXP Code has been moved to MinecraftEXP.lua

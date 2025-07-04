@@ -1,6 +1,6 @@
 ---@diagnostic disable: undefined-global
 healthSkin = 'normal'                              -- 'normal' or 'hardcore'
-hunger = 1                                        -- JUST IN CASE IF YOU WANT IT! ( goes from 0 to 1 )
+hunger = 1                                         -- JUST IN CASE IF YOU WANT IT! ( goes from 0 to 1 )
 items = {                                          -- you can add custom items here so yeah. {'item texture(in images/items)', 'Display Name', Is it Enchnated? (true/false), stack size}
   { 'empty',       '',                 false, 1 }, -- 1
   { 'empty',       '',                 false, 1 }, -- 2
@@ -382,28 +382,9 @@ function noteMiss(membersIndex, noteData, noteType, isSustainNote)
     switched_item = false
     callOnLuas('onSlotSwitch', { curItem }, true, false)
   end
-  if getDataFromSave('options', 'hurtSound', true) then
-    playSound('hit' .. math.random(1, 3), 1, 'minecraftHit')
-  end
-  if getDataFromSave('options', 'screenRotate', true) then
-    setProperty('camGame.angle', 0)
-    doTweenAngle('oof', 'camGame', 6, 0.05, 'linear')
-  end
-  if flashingLights then
-    setProperty('boyfriend.color', getColorFromHex('FF0000'))
-  end
-  runTimer('oofie', 0.1)
 end
 
 function onTimerCompleted(tag, loops, loopsLeft)
-  if tag == 'oofie' then
-    if flashingLights then
-      setProperty('boyfriend.color', getColorFromHex('FFFFFF'))
-    end
-    if getDataFromSave('options', 'screenRotate', true) then
-      doTweenAngle('oof', 'camGame', 0, 0.1, 'linear')
-    end
-  end
   if tag == 'fadetext1' then
     doTweenAlpha('fadeing', 'itemname', 0, 1, 'linear')
   end

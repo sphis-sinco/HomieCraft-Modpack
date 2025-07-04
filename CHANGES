@@ -1,3 +1,6 @@
+- Updated cobblestone item texture to be the 3d block render
+- Fixed pack icon
+- The minecraft miss code hass been moved to MinecraftMiss.lua
 - It is now easier to set usernames via MinecraftDeathReasons.lua
 - It is now easier to set usernames via MinecraftUsernames.lua
 - Fixed MCFHUD Selected item offsets

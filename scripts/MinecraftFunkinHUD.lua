@@ -190,8 +190,6 @@ function onCreatePost()
   setTextSize('exptext', 24)
   addLuaText('exptext')
   screenCenter('exptext', 'x')
-  setTextColor('exptext', 'b5fc7c')
-
 
   makeLuaText('shitscore', 'Score: 0 | Misses: 0 | Accuracy: ??.??% [?]', screenWidth, 0,
     baseCoords[2] + (downscroll and 130 or -120))
@@ -272,6 +270,7 @@ function onUpdatePost(elapsed)
   boyColor = rgbToHex(getProperty('boyfriend.healthColorArray'))
   setProperty('expfill.color', getColorFromHex(boyColor))
   setProperty('expempty.color', getColorFromHex(boyColor))
+  setProperty('exptext.color', getColorFromHex(boyColor))
 
   realRating = math.floor(rating * 10000) / 100
   setTextString('shitscore',

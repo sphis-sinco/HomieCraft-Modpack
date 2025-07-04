@@ -1,3 +1,4 @@
+- The EXP text color is now the color of boyfriend health bar
 - Updated cobblestone item texture to be the 3d block render
 - Fixed pack icon
 - The minecraft miss code hass been moved to MinecraftMiss.lua

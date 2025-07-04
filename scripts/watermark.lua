@@ -26,7 +26,7 @@ function onCreatePost()
 	setTextBorder('front', 0, '0xffffff')
 	setTextBorder('back', 0, '0xffffff')
 
-        if getDataFromSave('HomieCraftSave', 'watermark', true) then
+        if getModSetting('watermark', 'HomieCraftSave') then
                 addLuaText('back')
                 addLuaText('front')
         end

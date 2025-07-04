@@ -1,16 +1,16 @@
 function onCreate()
         initSaveData('HomieCraftSave', 'HomieCraft')
-        if getDataFromSave('HomieCraftSave', 'screenRotate', true) == nil then
-                setDataFromSave('HomieCraftSave', 'screenRotate', true)
-        end
-        if getDataFromSave('HomieCraftSave', 'hurtSound', true) == nil then
-                setDataFromSave('HomieCraftSave', 'hurtSound', true)
-        end
-        if getDataFromSave('HomieCraftSave', 'levelupsfx', true) == nil then
-                setDataFromSave('HomieCraftSave', 'levelupsfx', true)
-        end
-        if getDataFromSave('HomieCraftSave', 'watermark', true) == nil then
-                setDataFromSave('HomieCraftSave', 'watermark', true)
-        end
+        
+        setSaveData('screenRotate')
+        setSaveData('hurtSound')
+        setSaveData('levelupsfx')
+        setSaveData('watermark')
+
         flushSaveData('HomieCraftSave')
+end
+
+function setSaveData(save)
+        if getDataFromSave('HomieCraftSave', save, true) == nil then
+                setDataFromSave('HomieCraftSave', save, getModSetting(save, 'HomieCraftSave'))
+        end
 end

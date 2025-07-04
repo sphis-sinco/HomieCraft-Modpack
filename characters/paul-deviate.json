@@ -87,6 +87,14 @@
 			"anim": "item-stone_pickaxe",
 			"loop": false,
 			"name": "item-stone_pickaxe"
+		},
+		{
+			"offsets": [0, 0],
+			"indices": [],
+			"fps": 24,
+			"anim": "mine",
+			"loop": false,
+			"name": "mine"
 		}
 	],
 	"vocals_file": "",

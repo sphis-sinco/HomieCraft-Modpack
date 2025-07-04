@@ -1,4 +1,11 @@
 {
+	"storyName": "Homies",
+	"difficulties": "Normal",
+	"hideFreeplay": false,
+	"weekBackground": "homie",
+	"weekBefore": "tutorial",
+	"startUnlocked": true,
+	"hideStoryMode": false,
 	"songs": [
 		[
 			"plan",
@@ -19,18 +26,11 @@
 			]
 		]
 	],
-	"hiddenUntilUnlocked": false,
-	"hideFreeplay": false,
-	"weekBackground": "homie",
-	"difficulties": "Normal",
 	"weekCharacters": [
 		"",
 		"",
 		""
 	],
-	"storyName": "Homies",
-	"weekName": "homie",
-	"hideStoryMode": true,
-	"weekBefore": "tutorial",
-	"startUnlocked": true
+	"hiddenUntilUnlocked": false,
+	"weekName": "homie"
 }

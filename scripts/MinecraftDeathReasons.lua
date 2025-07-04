@@ -18,6 +18,7 @@ function onCreate()
 end
 
 function onStepHit()
+        countingDown = false
         gen()
 end
 

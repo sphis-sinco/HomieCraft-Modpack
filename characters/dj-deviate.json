@@ -1,44 +1,44 @@
 {
 	"animations": [
 		{
-			"offsets": [0, 0],
 			"loop": false,
-			"fps": 24,
+			"offsets": [0, 0],
 			"anim": "idle",
-			"indices": [],
-			"name": "idle"
+			"fps": 24,
+			"name": "idle",
+			"indices": []
 		},
 		{
-			"offsets": [0, 0],
 			"loop": false,
-			"fps": 24,
+			"offsets": [0, 0],
 			"anim": "singLEFT",
-			"indices": [],
-			"name": "left0"
+			"fps": 24,
+			"name": "left0",
+			"indices": []
 		},
 		{
-			"offsets": [0, 0],
 			"loop": false,
-			"fps": 24,
+			"offsets": [0, 0],
 			"anim": "singDOWN",
-			"indices": [],
-			"name": "down0"
+			"fps": 24,
+			"name": "down0",
+			"indices": []
 		},
 		{
-			"offsets": [0, 0],
 			"loop": false,
-			"fps": 24,
+			"offsets": [0, 0],
 			"anim": "singUP",
-			"indices": [],
-			"name": "up0"
+			"fps": 24,
+			"name": "up0",
+			"indices": []
 		},
 		{
-			"offsets": [0, 0],
 			"loop": false,
-			"fps": 24,
+			"offsets": [0, 0],
 			"anim": "singRIGHT",
-			"indices": [],
-			"name": "right0"
+			"fps": 24,
+			"name": "right0",
+			"indices": []
 		}
 	],
 	"vocals_file": "",
@@ -48,7 +48,7 @@
 	"healthicon": "dj",
 	"flip_x": false,
 	"healthbar_colors": [24, 96, 185],
-	"camera_position": [260, 0],
+	"camera_position": [-340, 0],
 	"sing_duration": 4,
 	"scale": 1,
 	"_editor_isPlayer": false

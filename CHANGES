@@ -1,3 +1,4 @@
+- Added a combo popup when your combo is 30 or higher
 - The TotalNotes Code has been moved to TotalNotes.lua
 - The Minecraft EXP Code has been moved to MinecraftEXP.lua
 - The EXP text color is now the color of boyfriend health bar

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="combo.png">
+	<!-- Created using the Spritesheet and XML generator -->
+	<!-- https://uncertainprod.github.io/FNF-Spritesheet-XML-generator-Web -->
+	<SubTexture name="combo0000" x="2409" y="175" width="4" height="4" frameX="0" frameY="0" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="combo0001" x="2409" y="175" width="4" height="4" frameX="0" frameY="0" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="combo0002" x="1931" y="773" width="206" height="80" frameX="2" frameY="-320" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="combo0003" x="1931" y="660" width="478" height="113" frameX="2" frameY="-304" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="combo0004" x="753" y="490" width="543" height="136" frameX="-139" frameY="-292" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="combo0005" x="497" y="1644" width="571" height="152" frameX="-242" frameY="-284" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="combo0006" x="1015" y="1451" width="588" height="160" frameX="-300" frameY="-280" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="combo0007" x="1210" y="1285" width="598" height="164" frameX="-331" frameY="-278" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="combo0008" x="0" y="1285" width="602" height="166" frameX="-347" frameY="-277" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="combo0009" x="1321" y="873" width="605" height="168" frameX="-355" frameY="-276" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="combo0010" x="1321" y="369" width="608" height="168" frameX="-363" frameY="-276" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="combo0011" x="1321" y="537" width="608" height="168" frameX="-367" frameY="-276" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="combo0012" x="1321" y="705" width="608" height="168" frameX="-372" frameY="-276" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="combo0013" x="1321" y="1041" width="609" height="166" frameX="-381" frameY="-277" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="combo0014" x="602" y="1285" width="608" height="164" frameX="-400" frameY="-278" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="combo0015" x="1321" y="0" width="610" height="170" frameX="-436" frameY="-271" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="combo0016" x="695" y="663" width="611" height="179" frameX="-506" frameY="-258" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="combo0017" x="0" y="663" width="695" height="181" frameX="-556" frameY="-249" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="combo0018" x="579" y="0" width="742" height="184" frameX="-540" frameY="-235" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="combo0019" x="0" y="490" width="753" height="173" frameX="-529" frameY="-226" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="combo0020" x="1931" y="505" width="460" height="155" frameX="-512" frameY="-212" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="combo0021" x="1931" y="344" width="467" height="161" frameX="-501" frameY="-203" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="combo0022" x="1931" y="175" width="478" height="169" frameX="-484" frameY="-189" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="combo0023" x="1931" y="0" width="486" height="175" frameX="-472" frameY="-180" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="combo0024" x="0" y="1644" width="497" height="183" frameX="-455" frameY="-166" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="combo0025" x="510" y="1451" width="505" height="190" frameX="-443" frameY="-156" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="combo0026" x="0" y="1451" width="510" height="193" frameX="-431" frameY="-147" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="combo0027" x="1321" y="170" width="518" height="199" frameX="-419" frameY="-137" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="combo0028" x="535" y="1071" width="528" height="208" frameX="-401" frameY="-122" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="combo0029" x="0" y="1071" width="535" height="214" frameX="-389" frameY="-112" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="combo0030" x="552" y="844" width="546" height="221" frameX="-371" frameY="-98" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="combo0031" x="0" y="844" width="552" height="227" frameX="-359" frameY="-88" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="combo0032" x="579" y="184" width="563" height="235" frameX="-340" frameY="-73" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="combo0033" x="0" y="249" width="569" height="241" frameX="-328" frameY="-62" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="combo0034" x="0" y="0" width="579" height="249" frameX="-309" frameY="-47" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="combo0035" x="1093" y="1827" width="524" height="110" frameX="-358" frameY="-183" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="combo0036" x="552" y="1827" width="541" height="117" frameX="-331" frameY="-169" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="combo0037" x="0" y="1827" width="552" height="121" frameX="-313" frameY="-159" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="combo0038" x="1068" y="1644" width="569" height="128" frameX="-285" frameY="-144" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="combo0039" x="2014" y="853" width="80" height="81" frameX="-770" frameY="-139" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="combo0040" x="1931" y="853" width="83" height="84" frameX="-756" frameY="-122" frameWidth="1280" frameHeight="720"/>
+</TextureAtlas>

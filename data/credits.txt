@@ -16,5 +16,5 @@ Minecraft HUD
 n_bonnie::face::Minecraft HUD Script.::https://underscorebon.carrd.co/::0xFF33FF66
 
 MC Assets
-Mojang Studios\nXbox Game Studios::face::Minecraft Devs.\nMinecraft assets::https://www.minecraft.net/en-us::0xFF33FF66
+Mojang Studios::face::Minecraft Devs.\nMinecraft assets::https://www.minecraft.net/en-us::0xFF33FF66
 C418::face::Minecraft music used::https://c418.org/::0xFF33FF66

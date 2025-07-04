@@ -30,9 +30,10 @@ pastitems = {
 }
 
 function goodNoteHitPre(index, noteData, noteType, isSustain)
-  if sing_item > 0 then
+  if sing_item > 0 and switched_item then
     curItem = sing_item
     switched_item = false
+    callOnLuas('onSlotSwitch', { curItem }, true, false)
   end
 end
 
@@ -376,9 +377,10 @@ end
 switched_item = false
 
 function noteMiss(membersIndex, noteData, noteType, isSustainNote)
-  if sing_item > 0 then
+  if sing_item > 0 and switched_item then
     curItem = sing_item
     switched_item = false
+    callOnLuas('onSlotSwitch', { curItem }, true, false)
   end
   if getDataFromSave('options', 'hurtSound', true) then
     playSound('hit' .. math.random(1, 3), 1, 'minecraftHit')

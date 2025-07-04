@@ -6,11 +6,11 @@ modVersion = '1.1.0'
 releaseState = 'Release'
 
 function onCreatePost()
-        if checkFileExists('.dev/.devText') then
+        if checkFileExists('.dev/devText') then
                 releaseState = 'Indev'
         end
 
-        makeLuaText('front', modName ..  modState .. ' ' .. modVersion .. ' (' .. indevString .. ')', 0, 10, 0)
+        makeLuaText('front', modName ..  modState .. ' ' .. modVersion .. ' (' .. releaseState .. ')', 0, 10, 0)
         setTextFont('front', 'Minecraftia.ttf')
         setTextSize('front', 16)
         setTextColor('front', '0xffffff')

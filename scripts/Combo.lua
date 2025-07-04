@@ -15,7 +15,7 @@ function onSectionHit()
         if gotCombo and not alrGotCombo then
                 alrGotCombo = true
 
-                if getDataFromSave('options', 'levelupsfx', true) then
+                if getDataFromSave('HomieCraftSave', 'levelupsfx', true) then
                         playSound('levelup')
                 end
 

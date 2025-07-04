@@ -57,15 +57,6 @@ function onCreatePost()
     sing_item = 1
   end
 
-  initSaveData('options', 'nb2MCHUD')
-  if getDataFromSave('options', 'screenRotate', true) == nil then
-    setDataFromSave('options', 'screenRotate', true)
-  end
-  if getDataFromSave('options', 'hurtSound', true) == nil then
-    setDataFromSave('options', 'hurtSound', true)
-  end
-  flushSaveData('options')
-
   daddycolor = rgbToHex(getProperty('dad.healthColorArray'))
 
   precacheSound('hit1')

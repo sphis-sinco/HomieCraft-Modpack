@@ -1,0 +1,57 @@
+[
+	{
+		"save": "levelupsfx",
+		"name": "Combo sound effect", 
+		"type": "bool",
+		"description": "If enabled, a sound effect will play when you get a combo",
+		"value": true
+	},
+	{
+		"save": "screenRotate",
+		"name": "Damage screen rotation",
+		"type": "bool",
+		"description": "If enabled, the screen will rotate when you take damage / miss a note",
+		"value": true
+	},
+	{
+		"save": "hurtSound",
+		"name": "Damage sound",
+		"type": "bool",
+		"description": "If enabled, a sound will play when you take damage / miss a note",
+		"value": true
+	}
+        /**
+	{
+		"save": "testbool",
+		"name": "Test Bool Option",
+		"type": "bool",
+		"description": "This is a test bool option",
+		"value": true
+	},
+	{
+		"save": "testnumber",
+		"name": "Test Number Option",
+		"type": "float",
+		"description": "This is a test number option",
+		"value": 5,
+	
+		"min": 0,
+		"max": 10,
+		"step": 1,
+
+		"decimals": 1, //If your option is type 'float' or 'percent', you should probably make it have atleast 1 decimal places
+		"scroll": 5
+	},
+	{
+		"save": "teststring",
+		"name": "Test String Option",
+		"type": "string",
+		"description": "This is a test string option",
+		"value": "Sun",
+		"format": "%vday", //Text formatting, '%v' means 'current value', so if my current value is 'Fri', it wil be shown as 'Friday'. You can also use '%d' to represent the default value
+
+		// String only variables
+		"options": ["Sun", "Mon", "Tues", "Wednes", "Thurs", "Fri", "Satur"]
+	}
+                **/
+]

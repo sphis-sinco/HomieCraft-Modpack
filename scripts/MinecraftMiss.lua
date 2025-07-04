@@ -1,9 +1,9 @@
 ---@diagnostic disable: undefined-global
 function noteMiss(index, noteData, noteType, isSustain)
-        if getDataFromSave('options', 'hurtSound', true) then
+        if getDataFromSave('HomieCraftSave', 'hurtSound', true) then
                 playSound('hit' .. math.random(1, 3), 1, 'minecraftHit')
         end
-        if getDataFromSave('options', 'screenRotate', true) then
+        if getDataFromSave('HomieCraftSave', 'screenRotate', true) then
                 setProperty('camGame.angle', 0)
                 doTweenAngle('oof', 'camGame', 6, 0.05, 'linear')
         end
@@ -20,7 +20,7 @@ function onTimerCompleted(tag, loops, loopsLeft)
                 if flashingLights then
                         setProperty('boyfriend.color', getColorFromHex('FFFFFF'))
                 end
-                if getDataFromSave('options', 'screenRotate', true) then
+                if getDataFromSave('HomieCraftSave', 'screenRotate', true) then
                         doTweenAngle('oof', 'camGame', 0, 0.1, 'linear')
                 end
         end

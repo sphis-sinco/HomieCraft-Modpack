@@ -1,6 +1,6 @@
 ---@diagnostic disable: undefined-global
 healthSkin = 'normal'                              -- 'normal' or 'hardcore'
-hunger = 1                                         -- JUST IN CASE IF YOU WANT IT! ( goes from 0 to 1 )
+hunger = 1                                        -- JUST IN CASE IF YOU WANT IT! ( goes from 0 to 1 )
 items = {                                          -- you can add custom items here so yeah. {'item texture(in images/items)', 'Display Name', Is it Enchnated? (true/false), stack size}
   { 'empty',       '',                 false, 1 }, -- 1
   { 'empty',       '',                 false, 1 }, -- 2

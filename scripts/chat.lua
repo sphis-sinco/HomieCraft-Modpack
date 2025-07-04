@@ -1,16 +1,15 @@
----@diagnostic disable: undefined-global
+---@diagnostic disable: undefined-global, deprecated, unused-local, lowercase-global
+
+
+bfName = boyfriendName
+dadAltName = dadName
+gfAltName = gfName
+
 if not lowQuality then
 	T = 0
 	Tend = 0
 	responded = true
 	function onCreatePost()
-		if bfName == 'sinco-plan' then
-			bfName = 'Sphis_Sinco'
-		end
-
-		if dadAltName == 'dj-plan' then
-			dadAltName = 'DjottaFlow'
-		end
 		if checkFileExists('scripts/chat/' .. boyfriendName .. '.json') then
 			jsonChatTxt = getTextFromFile('scripts/chat/' .. boyfriendName .. '.json')
 			jsonChatTxt = string.gsub('' .. jsonChatTxt, '[%{%}%\n]', '')
@@ -91,9 +90,6 @@ if not lowQuality then
 			end
 		end
 	end
-
-	bfName = boyfriendName
-	dadAltName = dadName;
 
 	function onUpdatePost(elapsed)
 		if keyboardJustPressed('T') then

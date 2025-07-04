@@ -1,4 +1,4 @@
----@diagnostic disable: undefined-global
+---@diagnostic disable: undefined-global, deprecated, lowercase-global
 --script by Krnqle, Sosclabab, or volv. borrowed from the 17bucks song "boulevard"
 --i modified it a bit
 
@@ -37,6 +37,11 @@ music = {
 	'deathScreen/c418/sweden',
 	'deathScreen/c418/wet hands',
 }
+
+bfName = boyfriendName
+dadAltName = dadName
+gfAltName = gfName
+deathMethod = ''
 
 function onCreatePost()
 	precacheImage('songToast')
@@ -362,23 +367,6 @@ function onCustomSubstateCreatePost(n)
 			setTextString('menu', 'Story Mode Menu')
 			setTextString('menu sp', 'Story Mode Menu')
 			setTextString('menup', 'Story Mode Menu')
-		end
-
-		bfName = boyfriendName
-		dadAltName = dadName;
-
-		if bfName == 'sinco-plan' then
-			bfName = 'Sphis_Sinco'
-		end
-
-		if dadAltName == 'dj-plan' then
-			dadAltName = 'DjottaFlow'
-		end
-
-		deathMethod = " died in a rap battle with " .. dadAltName
-
-		if songName == 'Plan' then
-			deathMethod = " couldn't accept " .. dadAltName .. "'s plan"
 		end
 
 		setTextString('chat s', bfName .. deathMethod)

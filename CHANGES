@@ -1,7 +1,9 @@
+- The TotalNotes Code has been moved to TotalNotes.lua
+- The Minecraft EXP Code has been moved to MinecraftEXP.lua
 - The EXP text color is now the color of boyfriend health bar
 - Updated cobblestone item texture to be the 3d block render
 - Fixed pack icon
-- The minecraft miss code hass been moved to MinecraftMiss.lua
+- The minecraft miss code has been moved to MinecraftMiss.lua
 - It is now easier to set usernames via MinecraftDeathReasons.lua
 - It is now easier to set usernames via MinecraftUsernames.lua
 - Fixed MCFHUD Selected item offsets

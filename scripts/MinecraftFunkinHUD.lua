@@ -1,4 +1,3 @@
----@diagnostic disable: undefined-global
 healthSkin = 'normal'                              -- 'normal' or 'hardcore'
 hunger = 1                                         -- JUST IN CASE IF YOU WANT IT! ( goes from 0 to 1 )
 items = {                                          -- you can add custom items here so yeah. {'item texture(in images/items)', 'Display Name', Is it Enchnated? (true/false), stack size}
@@ -37,6 +36,17 @@ function goodNoteHitPre(index, noteData, noteType, isSustain)
   end
 end
 
+function onCreate()
+  setOnScripts('scalething', scalething)
+  if downscroll then
+    baseCoords = { 232, 30 }
+  else
+    baseCoords = { 232, 600 }
+  end
+
+  setOnScripts('baseCoords', baseCoords)
+end
+
 function onCreatePost()
   luaDebugMode = true
 
@@ -57,12 +67,6 @@ function onCreatePost()
   flushSaveData('options')
 
   daddycolor = rgbToHex(getProperty('dad.healthColorArray'))
-
-  if downscroll then
-    baseCoords = { 232, 30 }
-  else
-    baseCoords = { 232, 600 }
-  end
 
   precacheSound('hit1')
   precacheSound('hit2')
@@ -170,27 +174,6 @@ function onCreatePost()
     playAnim('hunger' .. i, 'full', true)
   end
 
-  makeLuaSprite('expempty', 'desatbar/empty', 0, baseCoords[2] + 18)
-  scaleObject('expempty', scalething, scalething)
-  setObjectCamera('expempty', 'hud')
-  setProperty('expempty.antialiasing', false)
-  addLuaSprite('expempty', true)
-  screenCenter('expempty', 'x')
-
-  makeLuaSprite('expfill', 'desatbar/full-railed', 0, baseCoords[2] + 18)
-  scaleObject('expfill', scalething, scalething)
-  setObjectCamera('expfill', 'hud')
-  setProperty('expfill.antialiasing', false)
-  addLuaSprite('expfill', true)
-  screenCenter('expfill', 'x')
-
-  makeLuaText('exptext', '0', screenWidth, 0, baseCoords[2] - 8)
-  setTextAlignment('exptext', 'center')
-  setTextFont('exptext', 'Minecraftia.ttf')
-  setTextSize('exptext', 24)
-  addLuaText('exptext')
-  screenCenter('exptext', 'x')
-
   makeLuaText('shitscore', 'Score: 0 | Misses: 0 | Accuracy: ??.??% [?]', screenWidth, 0,
     baseCoords[2] + (downscroll and 130 or -120))
   setTextFont('shitscore', 'Minecraftia.ttf')
@@ -205,17 +188,6 @@ function onCreatePost()
   addLuaText('itemname')
   screenCenter('itemname', 'x')
   setProperty('itemname.alpha', 0)
-
-  totalNotes = 0
-  for i = 1, getProperty('unspawnNotes.length') - 1 do -- Counts the Total notes
-    if not getPropertyFromGroup('unspawnNotes', i, 'isSustainNote') then
-      if not getPropertyFromGroup('unspawnNotes', i, 'hitCausesMiss') then
-        if getPropertyFromGroup('unspawnNotes', i, 'mustPress') then
-          totalNotes = totalNotes + 1
-        end
-      end
-    end
-  end
 end
 
 function onSongStart()
@@ -267,30 +239,13 @@ function onUpdatePost(elapsed)
   setProperty('bossbarfill.color', getColorFromHex(daddycolor))
   setProperty('bossbarempty.color', getColorFromHex(daddycolor))
 
-  boyColor = rgbToHex(getProperty('boyfriend.healthColorArray'))
-  setProperty('expfill.color', getColorFromHex(boyColor))
-  setProperty('expempty.color', getColorFromHex(boyColor))
-  setProperty('exptext.color', getColorFromHex(boyColor))
-
   realRating = math.floor(rating * 10000) / 100
   setTextString('shitscore',
     'Score: ' .. score .. ' | Misses : ' .. misses .. ' | Accuracy: ' .. realRating ..
     '% [' .. getProperty('ratingFC') .. ']')
 
   timey = getSongPosition() / songLength
-  setProperty('bossbarfill._frame.frame.width', (math.lerp(0, 182, timey)))
-
-  exp = combo / totalNotes
-  if exp <= 0 then
-    exp = 0.0000000001 -- lerp hates zero
-  end
-  setProperty('expfill._frame.frame.width', (math.lerp(0, 182, exp)))
-
-  if getProperty('expfill._frame.frame.width') > 182 then
-    setProperty('expfill._frame.frame.width', 182)
-  end
-
-  setTextString('exptext', combo)
+  setProperty('bossbarfill._frame.frame.width', (0 + timey * (182 - 0)))
 
   for i = 1, 9 do -- enchant glint stuff,  I'm not exprienced with shaders so here is my makeshift one.
     if not pastitems[i][3] == items[i][3] then
@@ -398,10 +353,6 @@ function onTweenCompleted(tag)
       doTweenColor('enchantGlint' .. i, 'item' .. i, 'ff87ff', 2, 'linear')
     end
   end
-end
-
-function math.lerp(a, b, t)
-  return a + t * (b - a);
 end
 
 function rgbToHex(array)

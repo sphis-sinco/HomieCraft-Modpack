@@ -1,6 +1,8 @@
 gotCombo = false
 alrGotCombo = false
 
+comboRequired = 30
+
 function onCreate()
         makeAnimatedLuaSprite('combo', 'combo', 0, 0, 'sparrow')
         addAnimationByPrefix('combo', 'combo', 'combo', 24, false)
@@ -37,7 +39,7 @@ function onUpdate(elapsed)
         boyColor = rgbToHex(getProperty('boyfriend.healthColorArray'))
         setProperty('combo.color', getColorFromHex(boyColor))
 
-        gotCombo = combo >= 30
+        gotCombo = combo >= comboRequired
 end
 
 function rgbToHex(array)

@@ -12,6 +12,7 @@ function onCreate()
         setObjectCamera('combo', 'camHUD')
         setProperty('combo.alpha', 0)
 
+        -- debugPrint(getProperty('combo.color'))
 
         if getDataFromSave('HomieCraftSave', 'levelupsfx', true) then
                 precacheSound('levelup')
@@ -22,7 +23,7 @@ function onSectionHit()
         if gotCombo and not alrGotCombo then
                 alrGotCombo = true
 
-                comboPopup('')
+                comboPopup('full-')
         end
 end
 
@@ -45,7 +46,12 @@ function onUpdate(elapsed)
         end
 
         boyColor = rgbToHex(getProperty('boyfriend.healthColorArray'))
-        setProperty('combo.color', getColorFromHex(boyColor))
+
+        if getProperty('combo.animation.name') == 'combo' then
+                setProperty('combo.color', getColorFromHex(boyColor))
+        else
+                setProperty('combo.color', 16777215)
+        end
 
         gotCombo = combo >= comboRequired
         -- screenCenter('combo')

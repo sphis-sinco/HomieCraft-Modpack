@@ -1,5 +1,12 @@
 [
 	{
+		"save": "watermark",
+		"name": "Watermark", 
+		"type": "bool",
+		"description": "If enabled, a watermark will rest in the bottom left corner of your screen",
+		"value": true
+	},
+	{
 		"save": "levelupsfx",
 		"name": "Combo sound effect", 
 		"type": "bool",

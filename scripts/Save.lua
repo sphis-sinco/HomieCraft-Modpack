@@ -9,5 +9,8 @@ function onCreate()
         if getDataFromSave('HomieCraftSave', 'levelupsfx', true) == nil then
                 setDataFromSave('HomieCraftSave', 'levelupsfx', true)
         end
+        if getDataFromSave('HomieCraftSave', 'watermark', true) == nil then
+                setDataFromSave('HomieCraftSave', 'watermark', true)
+        end
         flushSaveData('HomieCraftSave')
 end

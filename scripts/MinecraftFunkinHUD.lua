@@ -47,28 +47,6 @@ function onCreate()
   setOnScripts('baseCoords', baseCoords)
 end
 
-function onStepHit()
-  increaseCobble = false
-  cobbleItemIndex = 0
-
-  if songName == 'Deviate' then
-    cobbleItemIndex = 1
-    if curBeat == 23 and curStep == 89 then
-      increaseCobble = true
-    end
-    if curBeat == 39 and curStep == 156 then
-      increaseCobble = true
-    end
-    if curBeat == 131 and curStep == 524 then
-      increaseCobble = true
-    end
-  end
-
-  if increaseCobble then
-    items[cobbleItemIndex][4] = items[cobbleItemIndex][4] + 1
-  end
-end
-
 function onCreatePost()
   luaDebugMode = true
 
@@ -239,6 +217,29 @@ end
 function onStepHit()
   if curItem == sing_item then
     switched_item = false
+  end
+
+  increaseItem = false
+  itemIndex = 0
+
+  if songName == 'Deviate' then
+    itemIndex = 1
+    if curStep == 89 then
+      increaseItem = true
+    end
+    if curStep == 156 then
+      increaseItem = true
+    end
+    if curStep == 524 then
+      increaseItem = true
+    end
+  end
+
+  if increaseItem then
+    items[itemIndex][4] = items[itemIndex][4] + 1
+    if curItem == itemIndex then
+      callOnLuas('onSlotSwitch', { curItem }, true, false)
+    end
   end
 end
 

@@ -7,10 +7,24 @@
 		"value": true
 	},
 	{
+		"save": "coloredCombo",
+		"name": "Colored combo popup", 
+		"type": "bool",
+		"description": "If enabled, the combo popup will be the same color as the boyfriend healthbar",
+		"value": true
+	},
+	{
+		"save": "combo",
+		"name": "Combo popup", 
+		"type": "bool",
+		"description": "If enabled, a combo popup will appear at combo milestones",
+		"value": true
+	},
+	{
 		"save": "levelupsfx",
 		"name": "Combo sound effect", 
 		"type": "bool",
-		"description": "If enabled, a sound effect will play when you get a combo",
+		"description": "If enabled, a sound effect will play when you get a combo popup",
 		"value": true
 	},
 	{

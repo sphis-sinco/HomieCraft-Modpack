@@ -5,6 +5,8 @@ function onCreate()
         setSaveData('hurtSound', true)
         setSaveData('levelupsfx', true)
         setSaveData('watermark', true)
+        setSaveData('coloredCombo', true)
+        setSaveData('combo', true)
 
         flushSaveData('HomieCraftSave')
 end

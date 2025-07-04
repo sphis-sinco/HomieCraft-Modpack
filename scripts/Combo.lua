@@ -28,6 +28,10 @@ function onSectionHit()
 end
 
 function comboPopup(prefix)
+        if getDataFromSave('HomieCraftSave', 'combo', true) == false then
+                return
+        end
+
         if getDataFromSave('HomieCraftSave', 'levelupsfx', true) then
                 playSound('levelup')
         end
@@ -47,7 +51,7 @@ function onUpdate(elapsed)
 
         boyColor = rgbToHex(getProperty('boyfriend.healthColorArray'))
 
-        if getProperty('combo.animation.name') == 'combo' then
+        if getProperty('combo.animation.name') == 'combo' and getDataFromSave('HomieCraftSave', 'coloredCombo', true) then
                 setProperty('combo.color', getColorFromHex(boyColor))
         else
                 setProperty('combo.color', 16777215)

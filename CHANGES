@@ -6,6 +6,8 @@
 - Added settings to the mod
 
 # Minor changes
+- Added a setting for a combo popup
+- Added a setting for a colored combo popup
 - Fixed death screen crash when the girlfriend is null
 - Added death message for when you die during the countdown
 - LuaDebugMode enables when the game is detected as an Indev build

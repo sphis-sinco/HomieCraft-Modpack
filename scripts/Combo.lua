@@ -23,7 +23,7 @@ function onSectionHit()
         if gotCombo and not alrGotCombo then
                 alrGotCombo = true
 
-                comboPopup('full-')
+                comboPopup('')
         end
 end
 

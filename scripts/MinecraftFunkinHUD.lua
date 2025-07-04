@@ -48,8 +48,6 @@ function onCreate()
 end
 
 function onCreatePost()
-  luaDebugMode = true
-
   if songName == 'Plan' then
     items[1] = { 'wooden_sword', 'Wooden sword', false, 1 }
     items[2] = { 'apple', 'Apple', false, 2 }

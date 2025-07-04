@@ -219,6 +219,8 @@ function onUpdatePost(elapsed)
   setProperty('timeBarBG.visible', false)
   setProperty('timeTxt.visible', false)
   setProperty('scoreTxt.visible', false)
+  setProperty('iconP1.flipX', true)
+
   setProperty('iconP1.x', screenWidth - 250)
   setProperty('iconP1.y', getProperty('hotbar.y') - 80)
   setProperty('iconP2.x', 100)

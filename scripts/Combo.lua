@@ -11,7 +11,6 @@ function onCreate()
         -- scaleObject('combo', 0.25, 0.25)
         setObjectCamera('combo', 'camHUD')
         setProperty('combo.alpha', 0)
-        screenCenter('combo')
 
 
         if getDataFromSave('HomieCraftSave', 'levelupsfx', true) then
@@ -23,7 +22,7 @@ function onSectionHit()
         if gotCombo and not alrGotCombo then
                 alrGotCombo = true
 
-                comboPopup()
+                comboPopup('')
         end
 end
 
@@ -49,6 +48,7 @@ function onUpdate(elapsed)
         setProperty('combo.color', getColorFromHex(boyColor))
 
         gotCombo = combo >= comboRequired
+        -- screenCenter('combo')
 end
 
 function rgbToHex(array)

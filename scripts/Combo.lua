@@ -6,6 +6,7 @@ comboRequired = 30
 function onCreate()
         makeAnimatedLuaSprite('combo', 'combo', 0, 0, 'sparrow')
         addAnimationByPrefix('combo', 'combo', 'combo', 24, false)
+        addAnimationByPrefix('combo', 'full-combo', 'full-combo', 24, false)
         addLuaSprite('combo', true)
         -- scaleObject('combo', 0.25, 0.25)
         setObjectCamera('combo', 'camHUD')
@@ -22,13 +23,21 @@ function onSectionHit()
         if gotCombo and not alrGotCombo then
                 alrGotCombo = true
 
-                if getDataFromSave('HomieCraftSave', 'levelupsfx', true) then
-                        playSound('levelup')
-                end
-
-                setProperty('combo.alpha', 1)
-                playAnim('combo', 'combo')
+                combo()
         end
+end
+
+function combo(prefix)
+        if getDataFromSave('HomieCraftSave', 'levelupsfx', true) then
+                playSound('levelup')
+        end
+
+        setProperty('combo.alpha', 1)
+        playAnim('combo', prefix .. 'combo')
+end
+
+function fullCombo()
+        combo('full-')
 end
 
 function onUpdate(elapsed)

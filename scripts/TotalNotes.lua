@@ -12,3 +12,11 @@ function onCreatePost()
 
         setOnScripts('totalNotes', totalNotes)
 end
+
+gotFC = false
+function onSectionHit()
+        if combo == totalNotes and not gotFC then
+                gotFC = true
+                callOnScripts('fullCombo')
+        end
+end

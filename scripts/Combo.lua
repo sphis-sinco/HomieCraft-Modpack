@@ -28,11 +28,9 @@ function onUpdate(elapsed)
         if getProperty('combo.animation.finished') then
                 setProperty('combo.alpha', 0)
         end
-        
+
         boyColor = rgbToHex(getProperty('boyfriend.healthColorArray'))
-        setProperty('expfill.color', getColorFromHex(boyColor))
-        setProperty('expempty.color', getColorFromHex(boyColor))
-        setProperty('exptext.color', getColorFromHex(boyColor))
+        setProperty('combo.color', getColorFromHex(boyColor))
 
         gotCombo = combo >= 30
 end

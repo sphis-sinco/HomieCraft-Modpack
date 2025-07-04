@@ -2,6 +2,7 @@ Main Credits
 Sinco::sinco::Director, Musician, Animator::https://www.youtube.com/@sphis_sinco::00FF00
 Paul leps::pauleps::Lua Programmer::https://www.youtube.com/@nowayyourepingingme8082::FF0000
 Djotta flow::dj::Chillin::https://www.youtube.com/@djotta11::0000FF
+
 Minecraft Death Screen
 CheesyCap::face::Modified the scripts::https://gamebanana.com/members/2930763::0xFF33FF66
 n_bonnie::face::Minecraft HUD.\nUsed to make the "damage" script.::https://underscorebon.carrd.co/::0xFF33FF66
@@ -10,8 +11,10 @@ andrww/sosclabab::face::17Bucks Boulevard game over script.\nUsed to make the "y
 volv::face::17Bucks Boulevard game over script.\nUsed to make the "you died" script.::https://twitter.com/_volvy_::0xFF33FF66
 _mxnolusion_::face::.json text extraction code::https://gamebanana.com/members/3292520::0xFF33FF66
 Meme1079::face::Icon color getter::https://gamebanana.com/members/2112708::0xFF33FF66
-MC Death Screen Assets
-Mojang Studios\nXbox Game Studios::face::Minecraft Devs.\nSome Minecraft assets::https://www.minecraft.net/en-us::0xFF33FF66
-C418::face::Music::https://c418.org/::0xFF33FF66
+
 Minecraft HUD
-n_bonnie::face::Minecraft HUD.::https://underscorebon.carrd.co/::0xFF33FF66
+n_bonnie::face::Minecraft HUD Script.::https://underscorebon.carrd.co/::0xFF33FF66
+
+MC Assets
+Mojang Studios\nXbox Game Studios::face::Minecraft Devs.\nMinecraft assets::https://www.minecraft.net/en-us::0xFF33FF66
+C418::face::Minecraft music used::https://c418.org/::0xFF33FF66

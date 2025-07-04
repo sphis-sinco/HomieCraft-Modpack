@@ -9,6 +9,11 @@ function onCreate()
         setObjectCamera('combo', 'camHUD')
         setProperty('combo.alpha', 0)
         screenCenter('combo')
+
+
+        if getDataFromSave('HomieCraftSave', 'levelupsfx', true) then
+                precacheSound('levelup')
+        end
 end
 
 function onSectionHit()

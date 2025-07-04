@@ -57,6 +57,11 @@ function onCreatePost()
     sing_item = 1
   end
 
+  if songName == 'Deviate' then
+    items[3] = { 'stone_pickaxe', 'Stone Pickaxe', false, 1 }
+    sing_item = 3
+  end
+
   daddycolor = rgbToHex(getProperty('dad.healthColorArray'))
 
   precacheSound('hit1')

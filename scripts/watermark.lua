@@ -10,7 +10,7 @@ function onCreatePost()
                 releaseState = 'Indev'
         end
 
-        makeLuaText('front', modName ..  modState .. ' ' .. modVersion .. ' (' .. releaseState .. ')', 0, 10, 0)
+        makeLuaText('front', modName .. modState .. ' ' .. modVersion .. ' (' .. releaseState .. ')', 0, 10, 0)
         setTextFont('front', 'Minecraftia.ttf')
         setTextSize('front', 16)
         setTextColor('front', '0xffffff')
@@ -23,12 +23,11 @@ function onCreatePost()
         setProperty('back.x', getProperty('front.x') + 2)
         setProperty('back.y', getProperty('front.y') + 2)
 
-	setTextBorder('front', 0, '0xffffff')
-	setTextBorder('back', 0, '0xffffff')
+        setTextBorder('front', 0, '0xffffff')
+        setTextBorder('back', 0, '0xffffff')
 
-        if getModSetting('watermark', 'HomieCraftSave') then
+        if getDataFromSave('HomieCraftSave', 'watermark', true) then
                 addLuaText('back')
                 addLuaText('front')
         end
-
 end

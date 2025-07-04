@@ -1,3 +1,5 @@
+- Fixed MCFHUD Selected item offsets
+- Fixed MCFHUD Item offsets
 - The camera movements and zooms are more "dynamic" in "Plan" via a script file
 - The MCFHUD Calls "onSlotSwitch" when you hit or miss a note
 - The watermark can detect if the mod pack is currently a debug build

@@ -78,15 +78,15 @@ function onCreatePost()
   screenCenter('hotbar', 'x')
 
   for i = 1, 9 do
-    makeLuaSprite('item' .. i, 'items/' .. items[i][1], getProperty('hotbar.x') - 50 + (20 * scalething * (i)),
-      getProperty('hotbar.y') + 8)
+    makeLuaSprite('item' .. i, 'items/' .. items[i][1], getProperty('hotbar.x') - 51 + (20 * scalething * (i)),
+      getProperty('hotbar.y') + 9)
     scaleObject('item' .. i, scalething, scalething)
     setObjectCamera('item' .. i, 'hud')
     setProperty('item' .. i .. '.antialiasing', false)
     addLuaSprite('item' .. i, true)
   end
 
-  makeLuaSprite('hbSelect', 'selectedItem', 0, getProperty('hotbar.y') - 2)
+  makeLuaSprite('hbSelect', 'selectedItem', 0, getProperty('hotbar.y') - 3)
   scaleObject('hbSelect', scalething, scalething)
   setObjectCamera('hbSelect', 'hud')
   setProperty('hbSelect.antialiasing', false)
@@ -239,7 +239,7 @@ function onUpdate(elapsed)
       curItem = i
     end
   end
-  setProperty('hbSelect.x', getProperty('hotbar.x') - 62 + (20 * scalething * (curItem)))
+  setProperty('hbSelect.x', getProperty('hotbar.x') - 63 + (20 * scalething * (curItem)))
   if switched_item then
     playAnim('boyfriend', 'item-' .. items[curItem][1])
   end

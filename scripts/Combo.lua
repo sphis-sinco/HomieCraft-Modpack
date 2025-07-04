@@ -23,11 +23,11 @@ function onSectionHit()
         if gotCombo and not alrGotCombo then
                 alrGotCombo = true
 
-                combo()
+                comboPopup()
         end
 end
 
-function combo(prefix)
+function comboPopup(prefix)
         if getDataFromSave('HomieCraftSave', 'levelupsfx', true) then
                 playSound('levelup')
         end
@@ -37,7 +37,7 @@ function combo(prefix)
 end
 
 function fullCombo()
-        combo('full-')
+        comboPopup('full-')
 end
 
 function onUpdate(elapsed)

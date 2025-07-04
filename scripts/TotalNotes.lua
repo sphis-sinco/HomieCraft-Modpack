@@ -14,7 +14,7 @@ function onCreatePost()
 end
 
 gotFC = false
-function onSectionHit()
+function onStepHit()
         if combo == totalNotes and not gotFC then
                 gotFC = true
                 callOnScripts('fullCombo')

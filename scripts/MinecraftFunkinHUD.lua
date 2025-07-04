@@ -85,6 +85,8 @@ function onCreatePost()
     sing_item = 3
   end
 
+  curItem = sing_item
+
   daddycolor = rgbToHex(getProperty('dad.healthColorArray'))
 
   precacheSound('hit1')

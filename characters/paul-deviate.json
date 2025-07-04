@@ -92,6 +92,14 @@
 			"offsets": [0, 0],
 			"indices": [],
 			"fps": 24,
+			"anim": "item-cobblestone",
+			"loop": false,
+			"name": "item-cobblestone"
+		},
+		{
+			"offsets": [0, 0],
+			"indices": [],
+			"fps": 24,
 			"anim": "mine",
 			"loop": false,
 			"name": "mine"

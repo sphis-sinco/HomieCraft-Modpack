@@ -1,4 +1,9 @@
----@diagnostic disable: undefined-global
+function onCreatePost()
+        precacheSound('hit1')
+        precacheSound('hit2')
+        precacheSound('hit3')
+end
+
 function noteMiss(index, noteData, noteType, isSustain)
         if getDataFromSave('HomieCraftSave', 'hurtSound', true) then
                 playSound('hit' .. math.random(1, 3), 1, 'minecraftHit')

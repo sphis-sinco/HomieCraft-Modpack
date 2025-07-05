@@ -65,10 +65,6 @@ function onCreatePost()
 
   daddycolor = rgbToHex(getProperty('dad.healthColorArray'))
 
-  precacheSound('hit1')
-  precacheSound('hit2')
-  precacheSound('hit3')
-
   setRatingFC('N/A')
 
   makeLuaSprite('hotbar', 'hotbar', 0, baseCoords[2] + 40)

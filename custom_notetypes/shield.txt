@@ -1,0 +1,5 @@
+texture = "noteSkins/NOTE_assets-shield"
+rgbShader.r = 0xFF0000
+rgbShader.g = 0x00FF00
+rgbShader.b = 0x0000FF
+hitsound = ""

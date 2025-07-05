@@ -1,5 +1,5 @@
 function onCreatePost()
-        totalNotes = 0
+        totalNotes = 1
         for i = 1, getProperty('unspawnNotes.length') do -- Counts the Total notes
                 if not getPropertyFromGroup('unspawnNotes', i, 'isSustainNote') then
                         if not getPropertyFromGroup('unspawnNotes', i, 'hitCausesMiss') then

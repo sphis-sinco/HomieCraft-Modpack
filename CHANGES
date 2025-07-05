@@ -1,2 +1,6 @@
 # Minor changes
+- Added the mob mod funky notes replacing the pixelUI notes
+- Added the mob mod shield note
+- Fixed location of miss sound precaching
+- Fixed full combo popup appearing when you do not have a full combo yet
 - Changed location of the cave BG png to a new subfolder

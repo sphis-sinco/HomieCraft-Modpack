@@ -2,7 +2,7 @@
 
 modName = 'Homie Craft'
 modState = ' Alpha'
-modVersion = '1.1.0'
+modVersion = '1.2.0'
 releaseState = 'Release'
 
 function onCreatePost()

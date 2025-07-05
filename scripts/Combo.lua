@@ -20,7 +20,7 @@ function onCreate()
 end
 
 function onSectionHit()
-        if gotCombo and not alrGotCombo then
+        if gotCombo and not alrGotCombo and not fc then
                 alrGotCombo = true
 
                 comboPopup('')
@@ -28,6 +28,8 @@ function onSectionHit()
 end
 
 function comboPopup(prefix)
+        setProperty('combo.animation.finished', true)
+        
         if getDataFromSave('HomieCraftSave', 'combo', true) == false then
                 return
         end
@@ -40,7 +42,9 @@ function comboPopup(prefix)
         playAnim('combo', prefix .. 'combo')
 end
 
+fc = false
 function fullCombo()
+        fc = true
         comboPopup('full-')
 end
 

@@ -1,0 +1,139 @@
+{
+	"camera_boyfriend": [
+		-150,
+		0
+	],
+	"preload": {},
+	"_editorMeta": {
+		"boyfriend": "paul-deviate",
+		"dad": "dj-deviate",
+		"gf": "dj-deviate"
+	},
+	"boyfriend": [
+		0,
+		0
+	],
+	"stageUI": "pixel",
+	"girlfriend": [
+		0,
+		0
+	],
+	"objects": [
+		{
+			"x": 0,
+			"y": 0,
+			"scale": [
+				1,
+				1
+			],
+			"image": "backgrounds/cave/deep/bg",
+			"flipX": false,
+			"filters": 3,
+			"color": "FFFFFF",
+			"angle": 0,
+			"name": "bg",
+			"antialiasing": false,
+			"flipY": false,
+			"scroll": [
+				1,
+				1
+			],
+			"alpha": 1,
+			"type": "sprite"
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"scale": [
+				1,
+				1
+			],
+			"image": "backgrounds/cave/deep/skel",
+			"flipX": false,
+			"filters": 2,
+			"color": "FFFFFF",
+			"angle": 0,
+			"name": "skel",
+			"firstAnimation": "idle",
+			"antialiasing": false,
+			"flipY": false,
+			"scroll": [
+				1,
+				1
+			],
+			"alpha": 1,
+			"animations": [
+				{
+					"offsets": null,
+					"indices": [],
+					"fps": 24,
+					"anim": "idle",
+					"loop": true,
+					"name": "idle"
+				}
+			],
+			"type": "animatedSprite"
+		},
+		{
+			"type": "boyfriend"
+		},
+		{
+			"type": "dad"
+		},
+		{
+			"type": "gf"
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"scale": [
+				1,
+				1
+			],
+			"image": "backgrounds/cave/deep/creepi",
+			"flipX": false,
+			"filters": 2,
+			"color": "FFFFFF",
+			"angle": 0,
+			"name": "creepi",
+			"firstAnimation": "idle",
+			"antialiasing": false,
+			"flipY": false,
+			"scroll": [
+				1,
+				1
+			],
+			"alpha": 1,
+			"animations": [
+				{
+					"offsets": [
+						0,
+						0
+					],
+					"indices": [],
+					"fps": 24,
+					"anim": "idle",
+					"loop": true,
+					"name": "idle"
+				}
+			],
+			"type": "animatedSprite"
+		}
+	],
+	"camera_girlfriend": [
+		700,
+		400
+	],
+	"defaultZoom": 1.5,
+	"opponent": [
+		0,
+		0
+	],
+	"directory": "",
+	"camera_speed": 1.5,
+	"hide_girlfriend": true,
+	"camera_opponent": [
+		0,
+		0
+	]
+}
